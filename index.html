@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <!-- introduction -->
+    <main class="to-do-app">
+      <section class="introduction">
+        <h1 class="title">
+          Hello
+          <input type="text" id="name" placeholder="your name" />
+        </h1>
+      </section>
+
+      <!-- displaying time -->
+      <section class="Todays-Date">
+        <h2>
+          Todays date is:
+          <p id="date"></p>
+        </h2>
+      </section>
+
+      <section class="Todays-Time">
+        <h2>the current time is: <span id="time"></span></h2>
+      </section>
+
+      <!-- creating to do -->
+      <section class="Create-To-Do">
+        <h3>Create a To-Do</h3>
+        <form id="new-To-Do">
+          <h4>what would you like to do today?</h4>
+          <input
+            type="text"
+            placeholder="finish my homework"
+            name="content"
+            id="content"
+          />
+
+          <h4>pick an option</h4>
+          <div class="option">
+            <label>
+              <input type="radio" name="category" id="item1" value="business" />
+              <span class="bubble business"></span>
+              <div>Business</div>
+            </label>
+            <label>
+              <input type="radio" name="category" id="item2" value="personal" />
+              <span class="bubble personal"></span>
+              <div>Personal</div>
+            </label>
+            <label>
+              <input type="radio" name="category" id="item3" value="urgent" />
+              <span class="bubble urgent"></span>
+              <div>Urgent</div>
+            </label>
+            <label>
+              <input type="radio" name="category" id="item4" value="school" />
+              <span class="bubble school"></span>
+              <div>School</div>
+            </label>
+            <label>
+              <input type="radio" name="category" id="item5" value="chores" />
+              <span class="bubble chores"></span>
+              <div>Chores</div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="item6"
+                value="to_do_next_week"
+              />
+              <span class="bubble to_do_next_week"></span>
+              <div>can do tomorrow</div>
+            </label>
+          </div>
+          <input type="submit" value="Add-To-Do" />
+        </form>
+      </section>
+
+      <section class="To-Do-list">
+        <h3>To-Do list</h3>
+        <div class="list" id="To-Do-list"></div>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

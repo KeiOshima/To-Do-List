@@ -1,0 +1,283 @@
+
+*{
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+body{
+    
+    background: #EEE;
+    color: #313154;
+
+}
+
+section{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+h3{
+    color: #313154;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+h4{
+    color: gray;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px ;
+}
+
+
+
+.introduction .title{
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+}
+.introduction .title input{
+    margin-left: 12px;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.introduction .title,
+.introduction .title input{
+    color: #313154;
+    font-size: 24px;
+    font-weight: 700;
+
+}
+.Create-To-Do input[type="text"]{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    padding: 16px 24px;
+    color: #313154;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px black;
+    margin-bottom: 24px;
+}
+
+.Create-To-Do .option{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+
+.Create-To-Do .option label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #313154;
+    text-align: center;
+    padding: 24px;
+    box-shadow: 0 1px 3px black;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+input[type="radio"],
+input[type = "checkbox"]{
+    display: none;
+}
+
+.bubble{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    border: 2px solid #76BA99;
+    box-shadow: 0px 0px 4px #76BA99;
+    
+}
+
+.bubble.personal{
+    border-color: #748DA6;
+    box-shadow: 0px 0px 4px #748DA6;
+}
+
+.bubble.urgent{
+    border-color: red;
+    box-shadow: 0px 0px 4px red;
+}
+
+.bubble.school{
+    border-color: purple;
+    box-shadow: 0px 0px 4px purple;
+}
+
+.bubble.chores{
+    border-color: #A27B5C;
+    box-shadow: 0px 0px 4px #A27B5C;
+}
+.bubble.to_do_next_week{
+    border-color: #FFF7BC;
+    box-shadow: 0px 0px 4px #FFF7BC;
+}
+
+
+.bubble::after{
+    content: "";
+    display: block;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    background-color: #76BA99;
+    box-shadow: 0px 0px 4px #76BA99;
+    border-radius: 50%;
+    transition: 0.1s ease-in-out;
+} 
+
+.bubble.urgent::after{
+    background-color: red;
+    box-shadow: 0px 0px 4px red;
+}
+
+.bubble.personal::after{
+    background-color: #748DA6;
+    box-shadow: 0px 0px 4px #748DA6;
+}
+
+.bubble.school::after{
+    background-color: purple;
+    box-shadow: 0px 0px 4px purple;
+}
+
+.bubble.chores::after{
+    background-color: #A27B5C;
+    box-shadow: 0px 0px 4px #A27B5C;
+}
+
+.bubble.bubble.to_do_next_week::after{
+    background-color: #FFF7BC;
+    box-shadow: 0px 0px 4px #FFF7BC;
+}
+
+input:checked ~ .bubble::after{
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}
+
+.Create-To-Do .option label div{
+    margin-top: 16px;
+}
+
+.Create-To-Do input[type="submit"]{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 16px 24px;
+    color: white;
+    background-color: #313154;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0px 0px 4px white;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+
+}
+
+.Create-To-Do input[type="submit"]:hover{
+    opacity: 0.8;
+}
+
+.To-Do-list .list{
+    margin: 16px 0;
+
+}
+.To-Do-list .To-Do-item{
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px black;
+    margin-bottom: 16px;
+    
+
+}
+
+.To-Do-item label{
+    display: block;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.To-Do-item .To-Do-contents{
+  flex: auto;
+}
+
+.To-Do-item .To-Do-contents input{
+    color: #313154;
+    font-size: 18px;
+}
+
+.To-Do-item  .actions{
+    display: flex;
+    align-items: center;
+
+}
+
+.To-Do-item .actions button{
+    display: block;
+    padding: 8px;
+    border-radius: 0.25rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: 0.1s  ease-in-out;
+}
+
+.To-Do-item .actions button:hover{
+    opacity: 0.8;
+}
+
+.To-Do-item  .actions .edit{
+    margin-right: 8px;
+    background-color:  #313154;
+}
+
+.To-Do-item  .actions .remove{
+    background-color:  #313154;
+}
+.To-Do-item.done .To-Do-contents input{
+    text-decoration:line-through;
+    color: black;
+
+}
+
+
+
+
+
+
+
+
+
+ 
